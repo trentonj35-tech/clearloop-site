@@ -213,7 +213,7 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
     <div><div class="stat-num">16+</div><div class="stat-label">Locations supported</div></div>
     <div><div class="stat-num">4.8★</div><div class="stat-label">Avg review lift</div></div>
     <div><div class="stat-num">3x</div><div class="stat-label">Faster content creation</div></div>
-    <div><div class="stat-num">~$130/mo</div><div class="stat-label">All-in platform cost</div></div>
+    <div><div class="stat-num">Starting at $199</div><div class="stat-label">Per month, all-in</div></div>
   </div>
 </section>
 
@@ -233,7 +233,13 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
       <div class="demo-chart">
         <div class="demo-chart-label">ENGAGEMENT THIS WEEK</div>
         <div class="demo-bars">
-          ${[58,74,66,88,79,71,95].map((h,i)=>`<div class="demo-bar-col"><div class="demo-bar-fill" style="height:${h}%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">${['M','T','W','T','F','S','S'][i]}</div></div>`).join('')}
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:58%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">M</div></div>
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:74%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">T</div></div>
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:66%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">W</div></div>
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:88%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">T</div></div>
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:79%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">F</div></div>
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:71%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">S</div></div>
+          <div class="demo-bar-col"><div class="demo-bar-fill" style="height:95%;background:linear-gradient(180deg,#38bdf8,#1a6fc4);border-radius:4px 4px 0 0;"></div><div class="demo-bar-day">S</div></div>
         </div>
       </div>
     </div>
@@ -241,9 +247,19 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
 </div>
 
 <!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    ${[['Rinsed','#06b6d4'],['Google Business','#4285F4'],['Ayrshare','#6366f1'],['Facebook','#1877F2'],['Instagram','#E1306C'],['Stripe','#635bff'],['Supabase','#3ecf8e'],['Make.com','#6d28d9'],['Claude AI','#d97706'],['X (Twitter)','#14171A'],['TikTok','#EE1D52'],['LinkedIn','#0A66C2'],['Rinsed','#06b6d4'],['Google Business','#4285F4'],['Ayrshare','#6366f1'],['Facebook','#1877F2'],['Instagram','#E1306C'],['Stripe','#635bff'],['Supabase','#3ecf8e'],['Make.com','#6d28d9'],['Claude AI','#d97706'],['X (Twitter)','#14171A'],['TikTok','#EE1D52'],['LinkedIn','#0A66C2']].map(([n,c])=>`<div class="marquee-item"><span style="background:${c};box-shadow:0 0 8px ${c}88;"></span>${n}</div>`).join('')}
+<div style="padding:32px 5%;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="text-align:center;font-size:11px;color:var(--dim);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;">Works alongside tools you may already use</div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#06b6d4;"></span>Rinsed</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#4285F4;"></span>Google Business</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#1877F2;"></span>Facebook</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#E1306C;"></span>Instagram</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#635bff;"></span>Stripe</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#6366f1;"></span>Ayrshare</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#d97706;"></span>Claude AI</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#3ecf8e;"></span>Supabase</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#6d28d9;"></span>Make.com</div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#ff4a00;"></span>Zapier</div>
   </div>
 </div>
 
@@ -442,11 +458,20 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
 <!-- INTEGRATIONS -->
 <section id="integrations">
   <div class="centered">
-    <div class="section-label">Integrations</div>
-    <h2>Connects to everything<br>you already use.</h2>
-    <p class="section-sub">One API key per service. Most connections take under 30 minutes.</p>
+    <div class="section-label">Compatible tools</div>
+    <h2>Built to work with<br>the tools that matter.</h2>
+    <p class="section-sub">Clearloop is designed to connect with the platforms your car wash already uses — and our integration library is always growing. Not every connection listed is available on every plan.</p>
     <div class="int-pills">
-      ${[['Rinsed','#06b6d4'],['Google Business','#4285F4'],['Ayrshare','#6366f1'],['Facebook','#1877F2'],['Instagram','#E1306C'],['Stripe','#635bff'],['Supabase','#3ecf8e'],['Make.com','#6d28d9'],['Claude AI','#d97706'],['X (Twitter)','#14171A'],['TikTok','#EE1D52'],['LinkedIn','#0A66C2'],['Zapier','#ff4a00']].map(([n,c])=>`<div class="int-pill"><div class="int-dot" style="background:${c};box-shadow:0 0 8px ${c}88;"></div>${n}</div>`).join('')}
+      <div class="int-pill"><div class="int-dot" style="background:#06b6d4;"></div>Rinsed</div>
+      <div class="int-pill"><div class="int-dot" style="background:#4285F4;"></div>Google Business</div>
+      <div class="int-pill"><div class="int-dot" style="background:#6366f1;"></div>Ayrshare</div>
+      <div class="int-pill"><div class="int-dot" style="background:#1877F2;"></div>Facebook</div>
+      <div class="int-pill"><div class="int-dot" style="background:#E1306C;"></div>Instagram</div>
+      <div class="int-pill"><div class="int-dot" style="background:#635bff;"></div>Stripe</div>
+      <div class="int-pill"><div class="int-dot" style="background:#3ecf8e;"></div>Supabase</div>
+      <div class="int-pill"><div class="int-dot" style="background:#6d28d9;"></div>Make.com</div>
+      <div class="int-pill"><div class="int-dot" style="background:#d97706;"></div>Claude AI</div>
+      <div class="int-pill"><div class="int-dot" style="background:#ff4a00;"></div>Zapier</div>
     </div>
   </div>
 </section>
@@ -468,12 +493,12 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
       </div>
       <form id="inquiry-form" action="https://formspree.io/f/mjgjgane" method="POST" onsubmit="handleSubmit(event)">
         <div class="form-grid">
-          <div class="form-field"><label>First name *</label><input type="text" name="first_name" placeholder="Trenton" required/></div>
-          <div class="form-field"><label>Last name *</label><input type="text" name="last_name" placeholder="Williams" required/></div>
+          <div class="form-field"><label>First name *</label><input type="text" name="first_name" placeholder="John" required/></div>
+          <div class="form-field"><label>Last name *</label><input type="text" name="last_name" placeholder="Smith" required/></div>
         </div>
         <div class="form-field"><label>Email address *</label><input type="email" name="email" placeholder="you@yourcarwash.com" required/></div>
         <div class="form-field"><label>Phone number</label><input type="text" name="phone" placeholder="(555) 000-0000"/></div>
-        <div class="form-field"><label>Business name *</label><input type="text" name="business_name" placeholder="Sudstop Carwash" required/></div>
+        <div class="form-field"><label>Business name *</label><input type="text" name="business_name" placeholder="Your Car Wash" required/></div>
         <div class="form-grid">
           <div class="form-field"><label>Number of locations *</label>
             <select name="locations" required>
@@ -535,8 +560,8 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
       <div style="font-size:40px;margin-bottom:12px;">📅</div>
       <div style="font-size:15px;font-weight:700;margin-bottom:8px;">Schedule via Calendly</div>
       <div style="font-size:13px;color:var(--dim);margin-bottom:16px;">30-minute live demo · No commitment required</div>
-      <a href="https://calendly.com" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Open scheduler →</a>
-      <div style="font-size:11px;color:var(--dim);margin-top:10px;">Replace this URL with your Calendly link</div>
+      <a href="https://calendly.com/d/cvvt-pmk-7qr" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Open scheduler →</a>
+      <div style="font-size:11px;color:var(--dim);margin-top:10px;">30-minute live demo · No commitment required</div>
     </div>
     <div style="text-align:center;font-size:13px;color:var(--dim);">Or email us at <a href="mailto:hello@clearloopai.com" style="color:var(--cyan);text-decoration:none;">hello@clearloopai.com</a></div>
   </div>
