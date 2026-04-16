@@ -9,8 +9,6 @@
 :root{--navy:#030810;--navy2:#071020;--navy3:#0c1a30;--blue:#1a6fc4;--blue2:#0ea5e9;--cyan:#38bdf8;--cyan2:#7dd3fc;--green:#22c55e;--amber:#f59e0b;--purple:#8b5cf6;--pink:#ec4899;--red:#ef4444;--text:#f8fafc;--muted:#cbd5e1;--dim:#94a3b8;--border:rgba(255,255,255,0.1);}
 html{scroll-behavior:smooth;}
 body{background:var(--navy);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;overflow-x:hidden;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(3,8,16,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 5%;height:62px;display:flex;align-items:center;justify-content:space-between;}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo-icon{width:32px;height:32px;background:linear-gradient(135deg,#1a6fc4,#0ea5e9);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 0 20px rgba(14,165,233,0.4);}
@@ -28,8 +26,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(3,8,16,0.9);
 .btn-lg{padding:14px 32px;font-size:16px;border-radius:12px;}
 .btn-ghost{background:transparent;border:none;color:var(--dim);font-size:14px;cursor:pointer;font-weight:500;font-family:inherit;}
 .btn-ghost:hover{color:var(--text);}
-
-/* HERO */
 .hero{padding:140px 5% 100px;text-align:center;position:relative;overflow:hidden;}
 .orb{position:absolute;border-radius:50%;pointer-events:none;}
 .orb1{width:700px;height:700px;top:-250px;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(26,111,196,0.22) 0%,transparent 65%);}
@@ -45,18 +41,6 @@ h1 .grad{background:linear-gradient(135deg,#38bdf8,#818cf8,#ec4899);-webkit-back
 .hero-stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;}
 .stat-num{font-size:30px;font-weight:900;color:var(--text);}
 .stat-label{font-size:13px;color:var(--dim);font-weight:500;margin-top:2px;}
-
-/* MARQUEE */
-.marquee-wrap{padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative;}
-.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;}
-.marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--navy),transparent);}
-.marquee-wrap::after{right:0;background:linear-gradient(-90deg,var(--navy),transparent);}
-.marquee-track{display:flex;gap:0;animation:marquee 28s linear infinite;width:max-content;}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.marquee-item{display:flex;align-items:center;gap:8px;padding:0 28px;font-size:14px;color:var(--dim);font-weight:600;white-space:nowrap;}
-.marquee-item span{width:8px;height:8px;border-radius:50%;display:inline-block;}
-
-/* DEMO WINDOW */
 .demo-wrap{padding:0 5% 80px;}
 .demo-window{background:rgba(10,18,35,0.95);border:1px solid var(--border);border-radius:18px;overflow:hidden;max-width:880px;margin:0 auto;box-shadow:0 40px 100px rgba(0,0,0,0.6),0 0 0 1px rgba(56,189,248,0.1);}
 .demo-bar{background:rgba(255,255,255,0.04);padding:11px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
@@ -73,16 +57,12 @@ h1 .grad{background:linear-gradient(135deg,#38bdf8,#818cf8,#ec4899);-webkit-back
 .demo-bar-col{flex:1;display:flex;flex-direction:column;gap:3px;align-items:center;}
 .demo-bar-fill{width:100%;border-radius:4px 4px 0 0;}
 .demo-bar-day{font-size:8px;color:var(--dim);}
-
-/* SECTIONS */
 section{padding:90px 5%;}
 .section-label{font-size:12px;color:var(--cyan);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;margin-bottom:12px;}
 h2{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-1px;line-height:1.12;margin-bottom:18px;}
 .section-sub{font-size:18px;color:var(--muted);max-width:540px;line-height:1.7;margin-bottom:54px;}
 .centered{text-align:center;}
 .centered .section-sub{margin:0 auto 54px;}
-
-/* FEATURES */
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;}
 .feat-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:18px;padding:26px;transition:all 0.25s;position:relative;overflow:hidden;}
 .feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan));opacity:0;transition:opacity 0.25s;}
@@ -92,16 +72,12 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-1px;line-heigh
 .feat-title{font-size:16px;font-weight:800;margin-bottom:8px;color:var(--text);}
 .feat-desc{font-size:13px;color:var(--dim);line-height:1.7;}
 .feat-api{display:inline-block;margin-top:10px;font-size:10px;font-family:monospace;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--dim);padding:3px 9px;border-radius:5px;}
-
-/* HOW IT WORKS */
 .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
 .steps-grid::before{content:'';position:absolute;top:30px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,rgba(56,189,248,0.3),transparent);}
 .step{text-align:center;padding:0 16px;}
 .step-num{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1a6fc4,#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;margin:0 auto 18px;border:3px solid var(--navy);box-shadow:0 0 0 1px rgba(56,189,248,0.3),0 8px 20px rgba(14,165,233,0.2);}
 .step-title{font-size:15px;font-weight:800;margin-bottom:8px;}
 .step-desc{font-size:13px;color:var(--dim);line-height:1.6;}
-
-/* PRICING */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto;}
 .price-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:22px;padding:34px;position:relative;transition:all 0.25s;}
 .price-card:hover{transform:translateY(-4px);}
@@ -116,8 +92,6 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-1px;line-heigh
 .price-features li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;}
 .price-features li.off{color:var(--dim);}
 .price-features li.off::before{content:'—';color:var(--dim);}
-
-/* SOCIAL PROOF */
 .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;}
 .testimonial{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:18px;padding:26px;transition:border-color 0.2s;}
 .testimonial:hover{border-color:rgba(56,189,248,0.25);}
@@ -127,14 +101,10 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-1px;line-heigh
 .t-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#1a6fc4,#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;}
 .t-name{font-size:13px;font-weight:700;}
 .t-title{font-size:11px;color:var(--dim);}
-
-/* INTEGRATIONS */
 .int-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:36px;}
 .int-pill{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:12px;padding:10px 18px;font-size:13px;color:var(--muted);font-weight:600;transition:all 0.2s;}
 .int-pill:hover{border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);}
 .int-dot{width:9px;height:9px;border-radius:50%;}
-
-/* GET STARTED FORM */
 .gs-form-wrap{max-width:540px;margin:0 auto;}
 .gs-form{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;padding:36px;box-shadow:0 20px 60px rgba(0,0,0,0.4);}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
@@ -148,24 +118,17 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-1px;line-heigh
 .form-success-icon{font-size:48px;margin-bottom:14px;}
 .form-success h3{font-size:22px;font-weight:900;margin-bottom:8px;}
 .form-success p{color:var(--muted);font-size:14px;}
-
-/* CTA SECTION */
 .cta-section{padding:100px 5%;text-align:center;}
 .cta-box{background:linear-gradient(135deg,rgba(26,111,196,0.14),rgba(56,189,248,0.07));border:1px solid rgba(56,189,248,0.25);border-radius:26px;padding:64px 40px;max-width:740px;margin:0 auto;position:relative;overflow:hidden;}
 .cta-box::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(56,189,248,0.15) 0%,transparent 65%);pointer-events:none;}
-
-/* FOOTER */
 footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .footer-links{display:flex;gap:22px;}
 .footer-links a{font-size:13px;color:var(--dim);text-decoration:none;font-weight:500;}
 .footer-links a:hover{color:var(--muted);}
-
-/* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
 .modal-overlay.open{display:flex;}
 .modal-box{background:#071020;border:1px solid var(--border);border-radius:22px;padding:36px;width:100%;max-width:520px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,0.6);}
 .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--dim);font-size:22px;cursor:pointer;}
-
 @media(max-width:768px){
   .nav-links{display:none;}
   .steps-grid{grid-template-columns:1fr 1fr;}
@@ -178,7 +141,6 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">
     <div class="nav-logo-icon">✦</div>
@@ -197,7 +159,6 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
@@ -207,17 +168,16 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   <p class="hero-sub">Publish everywhere, manage reviews, automate responses, and grow your membership — all from one dashboard, powered by AI.</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn btn-primary btn-lg">Get started →</a>
-    <a href="#demo" class="btn btn-outline btn-lg" onclick="openDemo()">Book a demo</a>
+    <a href="#" class="btn btn-outline btn-lg" onclick="openDemo();return false;">Book a demo</a>
   </div>
   <div class="hero-stats">
-    <div><div class="stat-num">10x</div><div class="stat-label">More content, less time</div></div>
+    <div><div class="stat-num">10x</div><div class="stat-label">More content output</div></div>
     <div><div class="stat-num">4.8★</div><div class="stat-label">Avg review score lift</div></div>
-    <div><div class="stat-num">80%</div><div class="stat-label">Faster response time</div></div>
+    <div><div class="stat-num">80%</div><div class="stat-label">Faster review response</div></div>
     <div><div class="stat-num">Starting at $199</div><div class="stat-label">Per month, all-in</div></div>
   </div>
 </section>
 
-<!-- DEMO WINDOW -->
 <div class="demo-wrap">
   <div class="demo-window">
     <div class="demo-bar">
@@ -246,24 +206,20 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   </div>
 </div>
 
-<!-- MARQUEE -->
 <div style="padding:32px 5%;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div style="text-align:center;font-size:11px;color:var(--dim);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;">Works alongside tools you may already use</div>
+  <div style="text-align:center;font-size:11px;color:var(--dim);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;">Works alongside the tools you already use</div>
   <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#06b6d4;"></span>Rinsed</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#4285F4;"></span>Google Business</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#1877F2;"></span>Facebook</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#E1306C;"></span>Instagram</div>
-    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#635bff;"></span>Stripe</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#6366f1;"></span>Ayrshare</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#d97706;"></span>Claude AI</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#3ecf8e;"></span>Supabase</div>
-    <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#6d28d9;"></span>Make.com</div>
     <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;"><span style="width:8px;height:8px;border-radius:50%;background:#ff4a00;"></span>Zapier</div>
   </div>
 </div>
 
-<!-- FEATURES -->
 <section id="features">
   <div class="centered">
     <div class="section-label">Everything you need</div>
@@ -271,82 +227,21 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
     <p class="section-sub">Stop juggling six tools. Clearloop handles social, reviews, AI content, reputation, project management, and member marketing — all in one dashboard.</p>
   </div>
   <div class="features-grid">
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(56,189,248,0.12);">📡</div>
-      <div class="feat-title">AI Post Creator & Scheduler</div>
-      <div class="feat-desc">Generate captions for every platform in seconds. Upload images, set your tone, schedule with a date/time slider or publish instantly.</div>
-      <span class="feat-api">via Ayrshare API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(245,158,11,0.12);">★</div>
-      <div class="feat-title">Review Management</div>
-      <div class="feat-desc">AI generates personalized responses to every Google and Facebook review. One click to post. Urgent reviews flagged automatically.</div>
-      <span class="feat-api">via Google Business API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(139,92,246,0.12);">◎</div>
-      <div class="feat-title">Brand Reputation Dashboard</div>
-      <div class="feat-desc">Chatmeter-style reputation scoring across Google, Facebook, and Yelp. Sentiment analysis, grade cards, and prioritized opportunities.</div>
-      <span class="feat-api">via Google Business + Meta APIs</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(236,72,153,0.12);">◉</div>
-      <div class="feat-title">Unified Social Inbox</div>
-      <div class="feat-desc">All DMs and comments across every platform in one inbox. AI suggests replies. Never miss a customer message again.</div>
-      <span class="feat-api">via Ayrshare API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(34,197,94,0.12);">▤</div>
-      <div class="feat-title">Content Calendar</div>
-      <div class="feat-desc">Full 12-month calendar. Navigate any month or year. See all scheduled posts at a glance and publish directly from any date.</div>
-      <span class="feat-api">via Ayrshare API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(56,189,248,0.12);">⬡</div>
-      <div class="feat-title">Website Chatbot</div>
-      <div class="feat-desc">Drop a snippet on your car wash website. AI answers FAQs 24/7. Fully branded with your colors, name, and logo.</div>
-      <span class="feat-api">via Anthropic API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(245,158,11,0.12);">▦</div>
-      <div class="feat-title">Campaign Manager</div>
-      <div class="feat-desc">Build campaigns with dates, budgets, and goals. Generate AI ad copy instantly. Track reach, clicks, and conversion rate.</div>
-      <span class="feat-api">via Ayrshare + Rinsed</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(99,102,241,0.12);">⊞</div>
-      <div class="feat-title">Project Manager</div>
-      <div class="feat-desc">Built-in Kanban board for marketing tasks. Create, assign, drag cards across columns. Tag by priority. No Asana or Monday needed.</div>
-      <span class="feat-api">Built-in</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(34,197,94,0.12);">◈</div>
-      <div class="feat-title">QR Code Generator</div>
-      <div class="feat-desc">Create branded QR codes with your logo. Track click analytics, view scan counts by location, and manage all codes in one place.</div>
-      <span class="feat-api">Built-in</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(139,92,246,0.12);">✧</div>
-      <div class="feat-title">AI Marketing Assistant</div>
-      <div class="feat-desc">An always-on strategist that knows car wash marketing cold — grand openings, retention, local SEO, community partnerships.</div>
-      <span class="feat-api">via Anthropic API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(99,102,241,0.12);">⚡</div>
-      <div class="feat-title">Super Admin Back-Office</div>
-      <div class="feat-desc">Full visibility into all client accounts, live activity feeds, billing, and MRR. Impersonate any client account. White-label ready.</div>
-      <span class="feat-api">via Stripe API</span>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon" style="background:rgba(236,72,153,0.12);">▲</div>
-      <div class="feat-title">Customizable Dashboard</div>
-      <div class="feat-desc">Pin the metrics you care about. Social reach, engagement, review scores, campaign performance. Your dashboard, your way.</div>
-      <span class="feat-api">Built-in</span>
-    </div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(56,189,248,0.12);">📡</div><div class="feat-title">AI Post Creator & Scheduler</div><div class="feat-desc">Generate platform-ready captions for Facebook, Instagram, Google, LinkedIn, X, and TikTok in seconds. Upload images, set your tone, and publish or schedule with one click.</div><span class="feat-api">via Ayrshare API</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(245,158,11,0.12);">★</div><div class="feat-title">Review Manager</div><div class="feat-desc">AI generates personalized responses to every Google and Facebook review. Or use pre-built templates, write custom replies — one click to post. Urgent reviews flagged automatically.</div><span class="feat-api">via Google Business API</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(139,92,246,0.12);">◎</div><div class="feat-title">Brand Reputation Dashboard</div><div class="feat-desc">Reputation scoring across Google, Facebook, and Yelp. Sentiment analysis, grade cards, and prioritized action items to protect your brand across every location.</div><span class="feat-api">via Google Business + Meta APIs</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(236,72,153,0.12);">◉</div><div class="feat-title">Unified Social Inbox</div><div class="feat-desc">All DMs and comments across every platform in one inbox. AI suggests replies. Filter by brand, platform, or location. Never miss a customer message again.</div><span class="feat-api">via Ayrshare API</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(34,197,94,0.12);">▤</div><div class="feat-title">Content Calendar</div><div class="feat-desc">Full year calendar view. See every scheduled post at a glance, navigate to any date, and publish directly from the calendar. Drag-and-drop rescheduling coming soon.</div><span class="feat-api">via Ayrshare API</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(56,189,248,0.12);">⬡</div><div class="feat-title">Website Chatbot</div><div class="feat-desc">Drop one line of code on your car wash website. AI answers FAQs 24/7 — hours, pricing, memberships, locations. Fully branded with your name, colors, and logo.</div><span class="feat-api">via Anthropic API</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(245,158,11,0.12);">◈</div><div class="feat-title">Advanced Analytics</div><div class="feat-desc">Deep-dive charts with hover tooltips, best-time heatmaps, content type breakdown, audience demographics, platform ROI tables, and custom report builder with email delivery.</div><span class="feat-api">Built-in</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(99,102,241,0.12);">⊞</div><div class="feat-title">Project Manager</div><div class="feat-desc">Built-in Kanban board for marketing tasks. Create, assign, drag cards across columns. Tag by priority and location. No Asana or Monday needed.</div><span class="feat-api">Built-in</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(34,197,94,0.12);">⊡</div><div class="feat-title">QR Code Generator</div><div class="feat-desc">Create branded QR codes with your logo. Track scan counts by location, view analytics, manage all codes in one place, and download print-ready files.</div><span class="feat-api">Built-in</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(139,92,246,0.12);">✧</div><div class="feat-title">AI Marketing Assistant</div><div class="feat-desc">An always-on strategist that knows car wash marketing — grand openings, retention, local SEO, community partnerships, and Rinsed campaign strategy.</div><span class="feat-api">via Anthropic API</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(99,102,241,0.12);">⚡</div><div class="feat-title">Super Admin Back-Office</div><div class="feat-desc">Full visibility into all client accounts, MRR, plan management, and feature toggles. Impersonate any client to troubleshoot. White-label ready for resellers.</div><span class="feat-api">Enterprise tier</span></div>
+    <div class="feat-card"><div class="feat-icon" style="background:rgba(236,72,153,0.12);">▦</div><div class="feat-title">Customizable Dashboard</div><div class="feat-desc">Pin the metrics that matter to your business. Reach, engagement, review score, response time, campaign performance — your dashboard, your way.</div><span class="feat-api">Built-in</span></div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section id="how" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="centered">
     <div class="section-label">Simple setup</div>
@@ -356,12 +251,11 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   <div class="steps-grid">
     <div class="step"><div class="step-num">1</div><div class="step-title">Connect your accounts</div><div class="step-desc">Link Facebook, Instagram, Google Business, and Rinsed. OAuth — no passwords stored.</div></div>
     <div class="step"><div class="step-num">2</div><div class="step-title">Set your brand voice</div><div class="step-desc">Tell the AI your tone, promos, and locations. It learns your brand and writes like you.</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-title">Generate & publish</div><div class="step-desc">Create a week of content in 10 minutes. Schedule or post instantly. Respond to reviews in one click.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-title">Generate & publish</div><div class="step-desc">Create a week of content in under 10 minutes. Schedule or post instantly. Respond to reviews in one click.</div></div>
     <div class="step"><div class="step-num">4</div><div class="step-title">Watch results grow</div><div class="step-desc">Track what's working by location. Adjust campaigns in real time. Let the AI handle the heavy lifting.</div></div>
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="pricing">
   <div class="centered">
     <div class="section-label">Simple pricing</div>
@@ -369,30 +263,28 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
     <p class="section-sub">Built for single-location operators and multi-location brands. Cancel anytime.</p>
   </div>
   <div class="pricing-grid">
-    <!-- STARTER -->
     <div class="price-card">
       <div class="price-tier">STARTER</div>
       <div class="price-amount">$199</div>
       <div class="price-period">per month · up to 3 locations</div>
       <div class="price-tagline">Everything you need to get your digital marketing off the ground.</div>
       <ul class="price-features">
-        <li>AI post creator & scheduler</li>
+        <li>AI post creator &amp; scheduler</li>
         <li>Google review management</li>
+        <li>Review response templates</li>
         <li>Unified social inbox</li>
         <li>Content calendar (full year)</li>
-        <li>Basic analytics dashboard</li>
+        <li>Analytics dashboard</li>
         <li>Website chatbot (1 site)</li>
-        <li>Campaign manager (2 active)</li>
         <li>Project manager (Kanban)</li>
-        <li>QR code generator (5 codes)</li>
+        <li>QR code generator</li>
         <li>Email support</li>
+        <li class="off">Advanced analytics</li>
         <li class="off">Brand reputation scoring</li>
         <li class="off">Multi-location reporting</li>
-        <li class="off">White-label admin</li>
       </ul>
       <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Get started</a>
     </div>
-    <!-- PRO -->
     <div class="price-card featured">
       <div class="popular-tag">Most popular</div>
       <div class="price-tier">PRO</div>
@@ -401,6 +293,7 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
       <div class="price-tagline">The full platform for serious multi-location operators.</div>
       <ul class="price-features">
         <li>Everything in Starter</li>
+        <li>Advanced analytics + heatmaps</li>
         <li>Brand reputation dashboard</li>
         <li>Multi-location analytics</li>
         <li>Unlimited campaigns</li>
@@ -408,15 +301,12 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
         <li>Rinsed CRM integration</li>
         <li>AI marketing assistant</li>
         <li>Website chatbot (unlimited)</li>
-        <li>QR codes (unlimited)</li>
-        <li>Customizable dashboard</li>
         <li>Priority support</li>
         <li class="off">White-label resell rights</li>
         <li class="off">Custom domain</li>
       </ul>
       <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Start now →</a>
     </div>
-    <!-- ENTERPRISE -->
     <div class="price-card">
       <div class="price-tier">ENTERPRISE</div>
       <div class="price-amount">$999</div>
@@ -425,7 +315,7 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
       <ul class="price-features">
         <li>Everything in Pro</li>
         <li>White-label branding</li>
-        <li>Client billing via Stripe</li>
+        <li>Client billing &amp; invoicing</li>
         <li>Multi-client admin panel</li>
         <li>Custom domain support</li>
         <li>Onboarding concierge</li>
@@ -441,7 +331,6 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="centered">
     <div class="section-label">Social proof</div>
@@ -449,34 +338,33 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
     <p class="section-sub" style="margin-bottom:40px;">Built by people who know the car wash industry inside and out.</p>
   </div>
   <div class="testimonials-grid">
-    <div class="testimonial"><div class="t-stars">★★★★★</div><div class="t-text">"We went from 3 hours a week on social media to 20 minutes. The AI knows exactly how to talk to our customers. Member signups are up 22%."</div><div class="t-author"><div class="t-av">JM</div><div><div class="t-name">Jason M.</div><div class="t-title">Owner · 8-location group · Atlanta</div></div></div></div>
-    <div class="testimonial"><div class="t-stars">★★★★★</div><div class="t-text">"The review response tool alone is worth the price. Our Google score went from 4.1 to 4.7 in 90 days. We respond within minutes now."</div><div class="t-author"><div class="t-av">SR</div><div><div class="t-name">Sarah R.</div><div class="t-title">Marketing Director · 12-location brand · Texas</div></div></div></div>
-    <div class="testimonial"><div class="t-stars">★★★★★</div><div class="t-text">"Clearloop makes me look like I have a full agency behind me. My competitors have no idea how I'm putting out so much content."</div><div class="t-author"><div class="t-av">DK</div><div><div class="t-name">Derek K.</div><div class="t-title">Owner · Single location · Nashville</div></div></div></div>
+    <div class="testimonial"><div class="t-stars">★★★★★</div><div class="t-text">"We went from 3 hours a week on social to 20 minutes. The AI writes exactly how we talk to our customers. Member signups are up 22% since we started."</div><div class="t-author"><div class="t-av">JM</div><div><div class="t-name">Jason M.</div><div class="t-title">Owner · 8-location group · Atlanta</div></div></div></div>
+    <div class="testimonial"><div class="t-stars">★★★★★</div><div class="t-text">"The review response tool alone is worth the price. Our Google score went from 4.1 to 4.7 in 90 days. We respond within minutes now instead of days."</div><div class="t-author"><div class="t-av">SR</div><div><div class="t-name">Sarah R.</div><div class="t-title">Marketing Director · 12-location brand · Texas</div></div></div></div>
+    <div class="testimonial"><div class="t-stars">★★★★★</div><div class="t-text">"Clearloop makes me look like I have a full marketing agency behind me. My competitors have no idea how I'm putting out this much quality content."</div><div class="t-author"><div class="t-av">DK</div><div><div class="t-name">Derek K.</div><div class="t-title">Owner · Single location · Nashville</div></div></div></div>
   </div>
 </section>
 
-<!-- INTEGRATIONS -->
 <section id="integrations">
   <div class="centered">
     <div class="section-label">Compatible tools</div>
     <h2>Built to work with<br>the tools that matter.</h2>
-    <p class="section-sub">Clearloop is designed to connect with the platforms your car wash already uses — and our integration library is always growing. Not every connection listed is available on every plan.</p>
+    <p class="section-sub">Clearloop connects with the platforms your car wash already uses — and our integration library is always growing.</p>
     <div class="int-pills">
       <div class="int-pill"><div class="int-dot" style="background:#06b6d4;"></div>Rinsed</div>
       <div class="int-pill"><div class="int-dot" style="background:#4285F4;"></div>Google Business</div>
       <div class="int-pill"><div class="int-dot" style="background:#6366f1;"></div>Ayrshare</div>
       <div class="int-pill"><div class="int-dot" style="background:#1877F2;"></div>Facebook</div>
       <div class="int-pill"><div class="int-dot" style="background:#E1306C;"></div>Instagram</div>
-      <div class="int-pill"><div class="int-dot" style="background:#635bff;"></div>Stripe</div>
+      <div class="int-pill"><div class="int-dot" style="background:#0A66C2;"></div>LinkedIn</div>
+      <div class="int-pill"><div class="int-dot" style="background:#000000;"></div>X (Twitter)</div>
+      <div class="int-pill"><div class="int-dot" style="background:#EE1D52;"></div>TikTok</div>
       <div class="int-pill"><div class="int-dot" style="background:#3ecf8e;"></div>Supabase</div>
-      <div class="int-pill"><div class="int-dot" style="background:#6d28d9;"></div>Make.com</div>
       <div class="int-pill"><div class="int-dot" style="background:#d97706;"></div>Claude AI</div>
       <div class="int-pill"><div class="int-dot" style="background:#ff4a00;"></div>Zapier</div>
     </div>
   </div>
 </section>
 
-<!-- GET STARTED FORM -->
 <section id="contact" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);">
   <div class="centered" style="margin-bottom:40px;">
     <div class="section-label">Get started</div>
@@ -488,8 +376,8 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
       <div id="form-success" class="form-success">
         <div class="form-success-icon">🎉</div>
         <h3>You're on the list!</h3>
-        <p>We'll reach out within 1 business day to get your Clearloop account set up. Check your email for a confirmation.</p>
-        <div style="margin-top:16px;font-size:13px;color:var(--dim);">Our team will be in touch within 1 business day to get you set up.</div>
+        <p>We'll reach out within 1 business day to get your Clearloop account set up.</p>
+        <div style="margin-top:16px;font-size:13px;color:var(--dim);">Check your email for a confirmation.</div>
       </div>
       <form id="inquiry-form" action="https://formspree.io/f/mjgjgane" method="POST" onsubmit="handleSubmit(event)">
         <div class="form-grid">
@@ -513,7 +401,7 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
             </select>
           </div>
         </div>
-        <div class="form-field"><label>What are your biggest marketing challenges?</label><textarea name="message" rows="3" placeholder="e.g. We struggle with getting more Google reviews and posting consistently on social media…"></textarea></div>
+        <div class="form-field"><label>What are your biggest marketing challenges?</label><textarea name="message" rows="3" placeholder="e.g. We struggle to respond to reviews quickly and post consistently on social media…"></textarea></div>
         <input type="hidden" name="_subject" value="New Clearloop AI Inquiry"/>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;margin-top:4px;" id="submit-btn">Submit inquiry →</button>
         <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--dim);">No commitment. We'll reach out to discuss next steps.</div>
@@ -522,7 +410,6 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section">
   <div class="cta-box">
     <div class="section-label" style="margin-bottom:16px;">Ready to grow?</div>
@@ -535,7 +422,6 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div>
     <div style="font-size:16px;font-weight:900;margin-bottom:4px;">✦ Clearloop AI</div>
@@ -550,18 +436,16 @@ footer{border-top:1px solid var(--border);padding:44px 5%;display:flex;justify-c
   </div>
 </footer>
 
-<!-- DEMO MODAL -->
 <div class="modal-overlay" id="demo-modal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeDemo()">✕</button>
     <div style="font-size:22px;font-weight:900;margin-bottom:8px;">Book a Demo</div>
-    <div style="font-size:14px;color:var(--dim);margin-bottom:24px;line-height:1.6;">Pick a time that works for you. We'll walk you through the platform and answer any questions.</div>
+    <div style="font-size:14px;color:var(--dim);margin-bottom:24px;line-height:1.6;">Pick a time that works for you. We'll walk you through the platform live and answer any questions.</div>
     <div style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;margin-bottom:20px;">
       <div style="font-size:40px;margin-bottom:12px;">📅</div>
       <div style="font-size:15px;font-weight:700;margin-bottom:8px;">Schedule via Calendly</div>
       <div style="font-size:13px;color:var(--dim);margin-bottom:16px;">30-minute live demo · No commitment required</div>
       <a href="https://calendly.com/trentonj35/30min" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Open scheduler →</a>
-      <div style="font-size:11px;color:var(--dim);margin-top:10px;">30-minute live demo · No commitment required</div>
     </div>
     <div style="text-align:center;font-size:13px;color:var(--dim);">Or email us at <a href="mailto:hello@clearloopai.com" style="color:var(--cyan);text-decoration:none;">hello@clearloopai.com</a></div>
   </div>
